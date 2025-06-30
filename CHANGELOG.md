@@ -1,0 +1,58 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## Release Guidelines
+
+When creating new releases, follow this format:
+
+```markdown
+## [vX.Y.Z] - YYYY-MM-DD
+
+### Added
+
+- New features or capabilities
+- New CLI options
+- New templates or components
+- Additional framework support
+
+### Changed
+
+- Updates to existing functionality
+- Changes in default behaviors
+- Dependency updates
+- Performance improvements
+
+### Deprecated
+
+- Features that will be removed in upcoming releases
+- Mark deprecated features with alternatives
+
+### Removed
+
+- Features removed in this release
+- Discontinued functionality
+- Removed dependencies
+
+### Fixed
+
+- Bug fixes
+- Error handling improvements
+- Documentation corrections
+- Performance issues
+
+### Security
+
+- Security vulnerability fixes
+- Security-related updates
+- Authentication/authorization improvements
+```
+
+Version numbering:
+
+- MAJOR version (x) - Incompatible API changes
+- MINOR version (y) - Added functionality in a backward compatible manner
+- PATCH version (z) - Backward compatible bug fixes

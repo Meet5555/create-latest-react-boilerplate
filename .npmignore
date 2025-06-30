@@ -1,0 +1,44 @@
+# Source files
+*.ts
+!*.d.ts
+bin/
+
+# Development files
+.git/
+.github/
+.vscode/
+.idea/
+.editorconfig
+.eslintrc*
+.prettierrc*
+.gitignore
+tsconfig.json
+*.tsbuildinfo
+
+# Documentation
+*.md
+!README.md
+
+# Misc
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Development dependencies
+node_modules/
+
+# Debug files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Cache directories
+.npm/
+.yarn/
+.pnp/
+.pnp.js
+
+todo-bugs.txt
+PUBLISHING_STEPS.md
+temp.txt
