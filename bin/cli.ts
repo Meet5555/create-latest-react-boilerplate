@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { program } from 'commander';
-import inquirer from 'inquirer';
+import prompts from 'prompts';
 import { generateProjectStructure } from '../src/index.js';
 import { colors } from '../src/utils/colors.js';
 
@@ -18,20 +18,33 @@ program
         !framework ||
         !ALLOWED_FRAMEWORKS.includes(framework.toLowerCase() as Framework)
       ) {
-        const frameworkAnswer = await inquirer.prompt<{ framework: Framework }>(
-          [
-            {
-              type: 'list',
-              name: 'framework',
-              message: 'Which framework would you like to use?',
-              choices: ALLOWED_FRAMEWORKS.map((f) => ({
-                name: f.charAt(0).toUpperCase() + f.slice(1),
-                value: f,
-              })),
-            },
-          ]
-        );
+        const frameworkAnswer = await prompts({
+          type: 'select',
+          name: 'framework',
+          message: 'Which framework would you like to use?',
+          choices: ALLOWED_FRAMEWORKS.map((f) => ({
+            title: f.charAt(0).toUpperCase() + f.slice(1),
+            value: f,
+          })),
+        });
+
+        // Handle user cancellation
+        if (!frameworkAnswer.framework) {
+          console.log('\n');
+          console.log(colors.error('✖ Operation cancelled'));
+          process.exit(0);
+        }
+
         framework = frameworkAnswer.framework;
+      }
+
+      // Ensure framework is defined and valid
+      if (
+        !framework ||
+        !ALLOWED_FRAMEWORKS.includes(framework.toLowerCase() as Framework)
+      ) {
+        console.error(colors.error('\n❌ Invalid framework selected'));
+        process.exit(1);
       }
 
       await generateProjectStructure(framework.toLowerCase() as Framework);

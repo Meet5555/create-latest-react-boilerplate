@@ -25,15 +25,7 @@ export default [
       typescript({ tsconfig: './tsconfig.json', sourceMap: true }),
       terser(),
     ],
-    external: [
-      'chalk',
-      'commander',
-      'inquirer',
-      'ora',
-      'prompts',
-      'path',
-      'fs',
-    ],
+    external: ['chalk', 'commander', 'ora', 'prompts', 'path', 'fs'],
   },
   {
     input: 'bin/cli.ts',
@@ -52,14 +44,6 @@ export default [
       }),
       terser(),
     ],
-    external: [
-      'chalk',
-      'commander',
-      'inquirer',
-      'ora',
-      'prompts',
-      'path',
-      'fs',
-    ],
+    external: ['chalk', 'commander', 'ora', 'prompts', 'path', 'fs'],
   },
 ];
