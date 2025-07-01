@@ -56,10 +56,10 @@
   "author": "Meet5555",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^5.3.0",
     "commander": "^11.1.0",
     "inquirer": "^12.6.3",
     "ora": "^7.0.1",
+    "picocolors": "^1.0.0",
     "prompts": "^2.4.2"
   },
   "devDependencies": {

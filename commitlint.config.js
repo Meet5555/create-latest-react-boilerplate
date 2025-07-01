@@ -10,6 +10,7 @@ export default {
         'refactor',
         'wip',
         'test',
+        'deps',
         'revert',
         'config',
         'docs',
