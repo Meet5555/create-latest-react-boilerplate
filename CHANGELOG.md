@@ -56,3 +56,36 @@ Version numbering:
 - MAJOR version (x) - Incompatible API changes
 - MINOR version (y) - Added functionality in a backward compatible manner
 - PATCH version (z) - Backward compatible bug fixes
+
+## [v1.0.0] - 2025-07-03
+
+### Added
+
+- Initial release
+- Support for React and Next.js project generation
+- TypeScript integration
+- Prettier configuration
+- Interactive CLI with project customization
+- Standardized folder structure
+- Version selection for frameworks
+- Custom hooks and components templates
+
+### Changed
+
+- N/A (Initial Release)
+
+### Deprecated
+
+- N/A (Initial Release)
+
+### Removed
+
+- N/A (Initial Release)
+
+### Fixed
+
+- N/A (Initial Release)
+
+### Security
+
+- N/A (Initial Release)

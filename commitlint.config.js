@@ -11,6 +11,7 @@ export default {
         'wip',
         'test',
         'deps',
+        'release',
         'revert',
         'config',
         'docs',
