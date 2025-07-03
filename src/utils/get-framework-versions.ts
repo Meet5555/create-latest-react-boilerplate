@@ -34,11 +34,8 @@ export async function getReactVersions(): Promise<string[]> {
         !v.includes('dev') &&
         !v.includes('canary')
     );
-  } catch (error) {
-    console.error(
-      'Error fetching React versions, using fallback versions:',
-      error
-    );
+  } catch {
+    console.error('Error fetching React versions, using fallback versions');
     return REACT_FALLBACK_VERSIONS;
   }
 }
@@ -57,11 +54,8 @@ export async function getNextVersions(): Promise<string[]> {
         !v.includes('dev') &&
         !v.includes('canary')
     );
-  } catch (error) {
-    console.error(
-      'Error fetching Next.js versions, using fallback versions:',
-      error
-    );
+  } catch {
+    console.error('Error fetching Next.js versions, using fallback versions');
     return NEXT_FALLBACK_VERSIONS;
   }
 }

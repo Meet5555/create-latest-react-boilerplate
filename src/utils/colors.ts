@@ -1,14 +1,14 @@
-import chalk from 'chalk';
+import pc from 'picocolors';
 
 // Define color theme
 export const colors = {
-  primary: chalk.hex('#0099ff'),
-  secondary: chalk.hex('#6c757d'),
-  success: chalk.green,
-  error: chalk.red,
-  warning: chalk.yellow,
-  info: chalk.cyan,
-  highlight: chalk.magenta,
-  muted: chalk.gray,
-  heading: chalk.bold.underline.white,
+  primary: (text: string) => pc.blue(text),
+  secondary: (text: string) => pc.gray(text),
+  success: pc.green,
+  error: pc.red,
+  warning: pc.yellow,
+  info: pc.cyan,
+  highlight: pc.magenta,
+  muted: pc.gray,
+  heading: (text: string) => pc.bold(pc.white(text)),
 };

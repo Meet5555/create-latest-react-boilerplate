@@ -18,7 +18,7 @@ export const getUseLocalStorageHookContent = ({
         ? `src/hooks/useLocalStorage.${ext}`
         : `hooks/useLocalStorage.${ext}`;
 
-  const hookContent = `${isTypescript ? "import React, { useState, useEffect } from 'react';" : ''}
+  const hookContent = `${isTypescript ? "import { useState, useEffect } from 'react';" : ''}
   
   export const useLocalStorage = ${isTypescript ? '<T,>' : ''}(key: string, initialValue${isTypescript ? ': T' : ''}) => {
     const [storedValue, setStoredValue] = useState${isTypescript ? '<T>' : ''}(() => {
