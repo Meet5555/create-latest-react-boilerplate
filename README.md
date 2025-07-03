@@ -93,6 +93,7 @@ src/
 │   ├── ui/              # Basic UI components (buttons, inputs)
 │   ├── layout/          # Layout components (header, footer)
 │   ├── shared/          # Shared/common components
+│   ├── common/          # Common components
 │   └── providers/       # Context providers or other providers
 │
 ├── hooks/               # Custom React hooks
@@ -102,7 +103,6 @@ src/
 │
 ├── services/            # API and external services
 ├── layouts/             # Page layout templates
-├── views/               # Page views
 ├── locales/             # Localization files
 │
 ├── utils/               # Utility functions
@@ -115,19 +115,21 @@ src/
 ├── assets/              # Static assets
 │   ├── images/          # Image files
 │   └── icons/           # Icon files
-└── styles/              # Global styles and themes
+├── styles/              # Global styles and themes
+└── fonts/               # Font files
 
 # React-specific
-└── routes/              # Route definitions
+├── pages/               # Page views (React)
+└── routes/              # Route definitions (React)
 
-# Additional for Next.js with App Router
-├── app/                 # App router pages
+# Next.js (with src directory)
+├── actions/             # Server actions (Next.js)
+├── app/                 # App router (if using App Router)
 │   ├── (auth)/          # Auth group routes
 │   ├── (dashboard)/     # Dashboard group routes
 │   └── api/             # API routes
-└── actions/             # Server actions
-
-# Next.js with Pages Router
+│
+# OR (if using Pages Router)
 ├── pages/               # Pages router
 │   └── api/             # API routes
 └── middleware.ts        # Next.js middleware
